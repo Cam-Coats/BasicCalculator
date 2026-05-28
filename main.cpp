@@ -31,7 +31,7 @@ void start() { // Starting text
 
 void calculatorHUD() { // The calculator HUD
 	system("cls");
-	cout << "========= My Calculator - by Cam =========" << endl;
+	cout << "========= Calculator - by Cam =========" << endl;
 	cout << "\n";
 	cout << "Choose your operation ('+' | '-' | '*' | '/'): ";
 	cin >> opt;
