@@ -120,11 +120,11 @@ void recommenceCalculator() { // If user wants to continue or move on
 	char choice;
 	cout << "\nDo you would to continue, or choose another operation?" << endl;
 	Sleep(2000);
-	cout << "\nYes (y) | No (n): ";
+	cout << "\nStay (s) | Leave (l): ";
 	cin >> choice;
 
 	switch (choice) {
-		case 'y':
+		case 's':
 			if (isInAddition == true) {
 				additionCalc();
 				break;
@@ -142,7 +142,7 @@ void recommenceCalculator() { // If user wants to continue or move on
 				break;
 			}
 			break;
-		case 'n':
+		case 'l':
 			isInAddition = isInSubtraction = isInMultiplication = isInDivision = false;
 			calculatorHUD();
 			break;
