@@ -117,39 +117,39 @@ void divisionCalc() { // Division operation
 }
 
 void recommenceCalculator() { // If user wants to continue or move on
-	char choice;
 	cout << "\nDo you would to continue, or choose another operation?" << endl;
 	Sleep(2000);
-	cout << "\nStay (s) | Leave (l): ";
-	cin >> choice;
-
-	switch (choice) {
-		case 's':
-			if (isInAddition == true) {
-				additionCalc();
+	while (true) {
+		char choice;
+		cout << "\nStay (s) | Leave (l): ";
+		cin >> choice;
+		switch (choice) {
+			case 's':
+				if (isInAddition == true) {
+					additionCalc();
+					break;
+				}
+				else if (isInSubtraction == true) {
+					subtractionCalc();
+					break;
+				}
+				else if (isInMultiplication == true) {
+					multiplicationCalc();
+					break;
+				}
+				else if (isInDivision == true) {
+					divisionCalc();
+					break;
+				}
 				break;
-			}
-			else if (isInSubtraction == true) {
-				subtractionCalc();
+			case 'l':
+				isInAddition = isInSubtraction = isInMultiplication = isInDivision = false;
+				calculatorHUD();
 				break;
-			}
-			else if (isInMultiplication == true) {
-				multiplicationCalc();
+			default:
+				cout << "\nInvalid input...\n";
+				Sleep(2000);
 				break;
-			}
-			else if (isInDivision == true) {
-				divisionCalc();
-				break;
-			}
-			break;
-		case 'l':
-			isInAddition = isInSubtraction = isInMultiplication = isInDivision = false;
-			calculatorHUD();
-			break;
-		default:
-			cout << "Invalid input...";
-			Sleep(2000);
-			recommenceCalculator();
-			break;
+		}
 	}
 }
