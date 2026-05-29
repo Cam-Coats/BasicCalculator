@@ -23,13 +23,13 @@ int main() {
 	return 0;
 }
 
-void start() { // Starting text
+void start() {
 	cout << "Welcome to the Basic Calculator (by Cam)";
 	Sleep(2000);
 	calculatorHUD();
 }
 
-void calculatorHUD() { // The calculator HUD
+void calculatorHUD() {
 	system("cls");
 	cout << "========= Calculator - by Cam =========" << endl;
 	cout << "\n";
